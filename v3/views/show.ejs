@@ -1,0 +1,13 @@
+<%- include ("partials/header") %>
+
+<h1> <%= match.name %> </h1>
+
+<img src="<%= match.image %>">
+
+<p> <%= match.description %> </p>
+
+<% match.comments.forEach(function(curComment){ %>
+    <p> <strong> <%= curComment.author %> </strong> - <%= curComment.text %> </p>
+<% }) %>
+
+<%- include ("partials/footer") %>
