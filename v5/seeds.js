@@ -24,36 +24,36 @@ function seedsDB()
 {
     //Remove all campgrounds
     Campgrounds.remove({},function(err,camp) {
-        if(err)
-        console.log("delete karne me dikka!");
-        else
-        {
-            console.log("Removed Campgrounds!");
-            data.forEach(function(superHero) {
-                Campgrounds.create(superHero,function(err,createdHero) {
-                    if(err)
-                    console.log("create karne me dikkat!");
-                    else{
-                        Comments.create({
-                            text: "A marvel creation",
-                            author: "Marvel Comics"
-                        },function(err,commentHere) {
-                            if(err)
-                            console.log("comment banane me dikkat!");
-                            else{
-                                createdHero.comments.push(commentHere);
-                                createdHero.save(function(err,data) {
-                                    if(err)
-                                    console.log("comment ko dubara save karne me dikkat!")
-                                    else
-                                    console.log(data);
-                                })
-                            }
-                        })
-                    }
-                })
-            })
-        }
+        // if(err)
+        // console.log("delete karne me dikka!");
+        // else
+        // {
+        //     console.log("Removed Campgrounds!");
+        //     data.forEach(function(superHero) {
+        //         Campgrounds.create(superHero,function(err,createdHero) {
+        //             if(err)
+        //             console.log("create karne me dikkat!");
+        //             else{
+        //                 Comments.create({
+        //                     text: "A marvel creation",
+        //                     author: "Marvel Comics"
+        //                 },function(err,commentHere) {
+        //                     if(err)
+        //                     console.log("comment banane me dikkat!");
+        //                     else{
+        //                         createdHero.comments.push(commentHere);
+        //                         createdHero.save(function(err,data) {
+        //                             if(err)
+        //                             console.log("comment ko dubara save karne me dikkat!")
+        //                             else
+        //                             console.log(data);
+        //                         })
+        //                     }
+        //                 })
+        //             }
+        //         })
+        //     })
+        // }
     })
 }
 

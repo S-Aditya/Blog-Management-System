@@ -6,10 +6,14 @@
 
 <p> <%= match.description %> </p>
 
+<p>
+    <em> Submitted by <%= match.author.username %> </em>
+</p>
+
 <a class="btn btn-success" href="/campgrounds/<%= match._id %>/comments/new">Add a new comment</a>
 
 <% match.comments.forEach(function(curComment){ %>
-    <p> <strong> <%= curComment.author %> </strong> - <%= curComment.text %> </p>
+    <p> <strong> <%= curComment.author.username %> </strong> - <%= curComment.text %> </p>
 <% }) %>
 
 <%- include ("../partials/footer") %>
